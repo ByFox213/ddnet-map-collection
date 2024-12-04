@@ -21,6 +21,8 @@ db = DB(str(Postresql(**{k.lower(): e for k, e in os.environ.items()})))
 
 async def main():
     await db.check_new_map(dd)
+    await dd.close()
+    db.close()
 
 
 if __name__ == "__main__":
