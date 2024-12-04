@@ -1,0 +1,5 @@
+ddapi==0.4.9
+pydantic
+python-dotenv
+aiohttp
+psycopg2-binary
