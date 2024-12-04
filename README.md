@@ -6,7 +6,6 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: map-collection
-  namespace: stormabot
 type: Opaque
 stringData:
   .env: |
@@ -33,7 +32,7 @@ spec:
             app: ddstats
         spec:
           containers:
-          - name: ddstats
+          - name: mapcollection
             image: image:latest
             imagePullPolicy: IfNotPresent
             volumeMounts:
